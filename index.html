@@ -3,422 +3,453 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Nexus Privacy Policy</title>
-  <meta name="description" content="AI Nexus 隐私政策 / Privacy Policy">
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #f4f7fb;
-      --bg-accent: #e8f2ff;
-      --panel: rgba(255, 255, 255, 0.78);
-      --panel-strong: rgba(255, 255, 255, 0.9);
-      --text: #10223a;
-      --muted: #5a6e86;
-      --line: rgba(16, 34, 58, 0.12);
-      --primary: #0f6fff;
-      --primary-soft: rgba(15, 111, 255, 0.12);
-      --shadow: 0 20px 60px rgba(18, 38, 63, 0.12);
-      --radius-xl: 28px;
-      --radius-lg: 20px;
-      --radius-md: 14px;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #08111f;
-        --bg-accent: #10233f;
-        --panel: rgba(14, 24, 39, 0.72);
-        --panel-strong: rgba(12, 22, 36, 0.9);
-        --text: #edf4ff;
-        --muted: #9bb0c8;
-        --line: rgba(237, 244, 255, 0.1);
-        --primary: #66a4ff;
-        --primary-soft: rgba(102, 164, 255, 0.14);
-        --shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
-      }
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "SF Pro Display", "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, var(--bg-accent), transparent 38%),
-        radial-gradient(circle at top right, rgba(15, 111, 255, 0.08), transparent 28%),
-        linear-gradient(180deg, var(--bg), color-mix(in srgb, var(--bg) 86%, white 14%));
-      line-height: 1.7;
-    }
-
-    .shell {
-      width: min(980px, calc(100vw - 32px));
-      margin: 0 auto;
-      padding: 28px 0 56px;
-    }
-
-    .hero,
-    .card,
-    .section {
-      background: var(--panel);
-      backdrop-filter: blur(22px) saturate(150%);
-      -webkit-backdrop-filter: blur(22px) saturate(150%);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .hero {
-      border-radius: var(--radius-xl);
-      padding: 28px;
-      margin-bottom: 18px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--primary-soft);
-      color: var(--primary);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 18px 0 12px;
-      font-size: clamp(34px, 5vw, 52px);
-      line-height: 1.06;
-      letter-spacing: -0.04em;
-    }
-
-    .subtitle {
-      margin: 0;
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 760px;
-    }
-
-    .chips {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .chip {
-      padding: 14px 16px;
-      border-radius: var(--radius-md);
-      background: var(--panel-strong);
-      border: 1px solid var(--line);
-    }
-
-    .chip strong {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 4px;
-    }
-
-    .chip span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .card {
-      border-radius: var(--radius-lg);
-      padding: 18px 20px;
-      margin-bottom: 18px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .card strong {
-      color: var(--text);
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.28);
-      font-size: 14px;
-    }
-
-    .section {
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      margin-bottom: 16px;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 24px;
-      letter-spacing: -0.03em;
-    }
-
-    h3 {
-      margin: 18px 0 8px;
-      font-size: 16px;
-    }
-
-    p {
-      margin: 0 0 12px;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    li + li {
-      margin-top: 8px;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .footer {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: 13px;
-      text-align: center;
-    }
-
-    @media (max-width: 640px) {
-      .shell {
-        width: min(100vw - 20px, 980px);
-        padding-top: 18px;
-      }
-
-      .hero,
-      .section,
-      .card {
-        padding: 18px;
-      }
-
-      nav a {
-        font-size: 13px;
-      }
-    }
-  </style>
+  <title>AI Nexus Support & Privacy</title>
+  <meta name="description" content="AI Nexus 技术支持与隐私政策页面，适用于 iOS 和 macOS，面向全年龄段用户，并为大部分国家和地区提供说明。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <main class="shell">
-    <section class="hero">
-      <div class="eyebrow">AI Nexus Privacy Policy</div>
-      <h1>隐私政策</h1>
-      <p class="subtitle">
-        本页面说明 AI Nexus 如何处理你的聊天内容、模型配置、API Key、附件、统计记录以及可选同步数据。
-        This page explains how AI Nexus handles your conversations, model settings, API keys, attachments,
-        usage records, and optional sync data.
-      </p>
-      <div class="chips">
-        <div class="chip">
-          <strong>本地优先 / Local-first</strong>
-          <span>聊天、配置与统计信息默认保存在你的设备上。</span>
+<body class="support-page">
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="AI Nexus Support and Privacy Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong>AI Nexus</strong>
+          <span>Support & Privacy</span>
+        </span>
+      </a>
+
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#availability">适用范围</a>
+        <a href="#coverage">技术支持</a>
+        <a href="#faq">FAQ</a>
+        <a href="#privacy">隐私政策</a>
+        <a href="#contact">联系支持</a>
+      </nav>
+    </header>
+
+    <section class="hero-panel">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">AI Nexus Support & Privacy</p>
+        <h1>一个页面，覆盖技术支持与隐私政策。</h1>
+        <p class="lead">
+          本页面同时适用于 AI Nexus 的 iOS 和 macOS 版本，包含技术支持、常见问题、故障排查、
+          联系方式，以及完整的隐私政策说明。AI Nexus 面向全年龄段用户，并尽量服务于大部分国家和地区的用户。
+        </p>
+
+        <div class="action-row">
+          <a class="button primary" href="mailto:huangweihao8713@gmail.com?subject=AI%20Nexus%20Support">发送支持邮件</a>
+          <a class="button secondary" href="#privacy">查看隐私政策</a>
         </div>
-        <div class="chip">
-          <strong>可选同步 / Optional Sync</strong>
-          <span>仅在支持设备和你主动启用时才会尝试 iCloud 同步。</span>
+
+        <div class="stat-grid">
+          <article class="stat-card">
+            <span class="stat-label">平台</span>
+            <strong>iOS + macOS</strong>
+            <p>同一份支持与隐私说明，同时覆盖移动端与桌面端。</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">年龄范围</span>
+            <strong>All Ages</strong>
+            <p>AI Nexus 面向全年龄段用户，未成年人建议在监护人指导下使用。</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">地区范围</span>
+            <strong>Most Regions</strong>
+            <p>产品设计上面向大部分国家和地区，具体可用性可能受当地政策和网络环境影响。</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">数据模式</span>
+            <strong>Local-first</strong>
+            <p>聊天、配置与统计信息默认优先保存在你的设备本地。</p>
+          </article>
         </div>
-        <div class="chip">
-          <strong>用户自选模型 / User-selected Providers</strong>
-          <span>请求会发送到你自己配置的模型服务提供方。</span>
-        </div>
-        <div class="chip">
-          <strong>更新日期 / Last Updated</strong>
-          <span>2026 年 3 月 17 日 / March 17, 2026</span>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="signal-stage">
+          <div class="signal-ring ring-one"></div>
+          <div class="signal-ring ring-two"></div>
+          <div class="signal-ring ring-three"></div>
+          <div class="signal-core"></div>
+          <div class="floating-note note-one">
+            <strong>Support</strong>
+            <span>FAQ, contact, troubleshooting</span>
+          </div>
+          <div class="floating-note note-two">
+            <strong>Privacy</strong>
+            <span>iOS and macOS policy in one page</span>
+          </div>
+          <div class="floating-note note-three">
+            <strong>Global</strong>
+            <span>All ages, most countries and regions</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="card">
-      <p>
-        <strong>简要说明 / Quick Summary:</strong>
-        AI Nexus 不要求你注册账户。应用当前版本默认不集成广告 SDK，也不依赖第三方统计 SDK。
-        你在应用中输入的内容会按你选择的功能用途处理，例如本地存储、调用你配置的 AI 接口、或在支持设备上进行可选同步。
-      </p>
+    <section class="section-block" id="availability">
+      <div class="section-heading">
+        <p class="section-kicker">Scope & Audience</p>
+        <h2>适用平台、年龄与地区</h2>
+        <p>
+          为了方便上架和用户查阅，这一页同时承担 Support URL 与 Privacy Policy 的角色。
+          页面内容适用于 AI Nexus 的 iOS 和 macOS 版本。
+        </p>
+      </div>
+
+      <div class="support-grid">
+        <article class="support-card">
+          <h3>适用于 iOS 与 macOS</h3>
+          <p>本页面说明 AI Nexus 在 iPhone、iPad 和 Mac 上的支持信息与隐私处理方式。</p>
+        </article>
+
+        <article class="support-card">
+          <h3>面向全年龄段</h3>
+          <p>AI Nexus 面向全年龄段用户提供服务。若未成年人使用，建议在父母或监护人指导下配置模型服务和网络访问。</p>
+        </article>
+
+        <article class="support-card">
+          <h3>覆盖大部分国家和地区</h3>
+          <p>AI Nexus 设计上面向大部分国家和地区的用户，但具体可用性仍可能受 App Store、当地法律、网络环境与第三方模型服务限制影响。</p>
+        </article>
+
+        <article class="support-card">
+          <h3>同页提供支持与隐私说明</h3>
+          <p>你可以在同一个页面中找到技术支持、常见问题、联系方式，以及数据处理与隐私政策内容。</p>
+        </article>
+      </div>
     </section>
 
-    <nav>
-      <a href="#scope">适用范围</a>
-      <a href="#collect">收集的信息</a>
-      <a href="#use">使用方式</a>
-      <a href="#providers">模型服务</a>
-      <a href="#storage">存储与同步</a>
-      <a href="#security">安全</a>
-      <a href="#rights">你的控制权</a>
-      <a href="#contact">联系方式</a>
-    </nav>
+    <section class="section-block" id="coverage">
+      <div class="section-heading">
+        <p class="section-kicker">Technical Support</p>
+        <h2>技术支持覆盖范围</h2>
+        <p>
+          如果问题发生在 AI Nexus 应用内，这里就是第一站；如果问题属于第三方模型服务本身，
+          我们也会帮你判断边界，并告诉你下一步应该查哪里。
+        </p>
+      </div>
 
-    <section class="section" id="scope">
-      <h2>1. 适用范围 / Scope</h2>
-      <p>
-        本隐私政策适用于 AI Nexus 应用及与其对应的 GitHub Pages 隐私政策页面。
-        This Privacy Policy applies to the AI Nexus app and the related GitHub Pages privacy page.
-      </p>
-      <p class="muted">
-        如果你通过 AI Nexus 连接第三方模型服务，第三方服务对数据的处理也将受其自身隐私政策和服务条款约束。
-        If you connect AI Nexus to a third-party model provider, that provider's privacy policy and terms will also apply.
-      </p>
+      <div class="support-grid">
+        <article class="support-card">
+          <h3>配置与连接</h3>
+          <p>帮助检查接口地址、API Key、模型名称、兼容格式，以及连接测试失败的原因。</p>
+          <ul class="clean-list">
+            <li>OpenAI / Anthropic / Google 等接口接入</li>
+            <li>OpenAI-compatible 端点排查</li>
+            <li>模型发现与连接测试失败</li>
+          </ul>
+        </article>
+
+        <article class="support-card">
+          <h3>聊天与附件</h3>
+          <p>协助确认消息未返回、模型能力异常、图片输入不可用、文件未按预期处理等问题。</p>
+          <ul class="clean-list">
+            <li>消息发送后无回复</li>
+            <li>视觉模型与图片附件</li>
+            <li>非图片文件的当前行为说明</li>
+          </ul>
+        </article>
+
+        <article class="support-card">
+          <h3>数据与同步</h3>
+          <p>说明聊天、统计、共享记忆、安全凭证的存储路径，以及 iCloud 同步的适用条件。</p>
+          <ul class="clean-list">
+            <li>本地存储与删除逻辑</li>
+            <li>iCloud 可选同步</li>
+            <li>凭证库与系统认证保护</li>
+          </ul>
+        </article>
+
+        <article class="support-card">
+          <h3>应用异常</h3>
+          <p>帮助收集崩溃、界面空白、状态不一致、版本迁移后异常等复现信息。</p>
+          <ul class="clean-list">
+            <li>iOS / macOS 版本信息收集</li>
+            <li>错误截图与步骤还原</li>
+            <li>隐私相关说明与界定</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <section class="section" id="collect">
-      <h2>2. 我们收集和处理的信息 / Information We Collect and Process</h2>
-      <h3>2.1 你主动提供的信息 / Information You Provide</h3>
-      <ul>
-        <li>聊天内容、提示词、你输入的用户信息和个性化内容。 Conversations, prompts, user info, and personalization content you enter.</li>
-        <li>你配置的接口地址、模型名称、API Key 以及相关模型参数。 Endpoint URLs, model names, API keys, and related model settings you configure.</li>
-        <li>你填写的资料信息，例如昵称和邮箱。 Profile information such as nickname and email, if you choose to enter them.</li>
-        <li>你主动选择的图片或文件附件。 Images or files you explicitly choose to attach.</li>
-      </ul>
+    <section class="section-block" id="triage">
+      <div class="section-heading">
+        <p class="section-kicker">4-Minute Triage</p>
+        <h2>先做这 4 步，很多问题可以更快定位</h2>
+      </div>
 
-      <h3>2.2 应用在本地生成或保存的信息 / Data Generated or Stored Locally</h3>
-      <ul>
-        <li>聊天会话、消息时间、模型切换记录和会话标题。 Chat histories, timestamps, model selections, and conversation titles.</li>
-        <li>Token 用量、费用估算、时间范围统计等使用记录。 Token usage, estimated cost, and usage analytics records.</li>
-        <li>界面主题、语言、偏好设置等设备端配置。 Device-side preferences such as theme, language, and UI settings.</li>
-      </ul>
+      <div class="step-grid">
+        <article class="step-card">
+          <span class="step-index">01</span>
+          <h3>检查你正在使用的模型配置</h3>
+          <p>确认端点地址、模型名、格式偏好和 API Key 是否对应同一家服务，不要把不同供应商的配置混用。</p>
+        </article>
 
-      <h3>2.3 敏感配置 / Sensitive Configuration</h3>
-      <p>
-        已保存的模型配置和 API Key 会使用系统安全存储机制保存。 In the current app build,
-        saved model profiles and API keys are stored using the system secure storage mechanism.
-      </p>
+        <article class="step-card">
+          <span class="step-index">02</span>
+          <h3>在应用内跑一次连接测试</h3>
+          <p>如果连接测试已经失败，优先排查网络、Key 权限、服务商配额和端点路径，而不是先怀疑聊天页。</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-index">03</span>
+          <h3>确认当前模型是否支持你要的能力</h3>
+          <p>图片输入需要模型支持视觉能力。非图片文件在当前版本通常不会被自动解析上传，只会以文件标识加入上下文。</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-index">04</span>
+          <h3>区分应用问题和供应商问题</h3>
+          <p>如果接口测试成功但回复异常，可能是模型服务本身的限额、策略或上游波动；如果应用内状态错乱，再联系支持更高效。</p>
+        </article>
+      </div>
     </section>
 
-    <section class="section" id="use">
-      <h2>3. 我们如何使用这些信息 / How We Use Information</h2>
-      <ul>
-        <li>提供聊天、模型切换、消息生成和多模型访问能力。 To provide chat, model switching, message generation, and multi-model access.</li>
-        <li>保存你的会话历史、偏好设置和个人化上下文。 To save your conversation history, preferences, and personalization context.</li>
-        <li>记录 Token 用量和估算费用，帮助你查看使用趋势。 To record token usage and estimated cost so you can review usage trends.</li>
-        <li>在你主动触发时，执行模型发现、接口测试和同步操作。 To perform model discovery, connection tests, and sync actions when you explicitly trigger them.</li>
-      </ul>
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="section-kicker">Popular Fixes</p>
+        <h2>最常见的 6 类问题</h2>
+      </div>
+
+      <div class="issue-grid">
+        <article class="issue-card">
+          <h3>连接失败或没有回复</h3>
+          <p>优先检查接口地址、Key 权限、模型名是否可用，以及服务商账户是否还有额度。</p>
+        </article>
+        <article class="issue-card">
+          <h3>图片传不上去</h3>
+          <p>确认当前模型支持视觉输入，并检查你选择的是图片而不是普通文件。</p>
+        </article>
+        <article class="issue-card">
+          <h3>非图片文件没有被模型读取</h3>
+          <p>当前版本通常不会自动解析并上传非图片文件；它更多是作为文件标识加入消息上下文。</p>
+        </article>
+        <article class="issue-card">
+          <h3>同步看起来没生效</h3>
+          <p>iCloud 同步属于可选功能，只在支持的 iOS 设备和你主动开启时尝试执行。</p>
+        </article>
+        <article class="issue-card">
+          <h3>找不到已保存的 API Key</h3>
+          <p>已保存配置会通过系统安全存储机制保护。先检查是否切换了配置、删除了凭证，或重新录入后验证。</p>
+        </article>
+        <article class="issue-card">
+          <h3>隐私或数据边界不清楚</h3>
+          <p>本页下方已经包含完整隐私政策，可直接查看数据存储、同步、年龄范围和地区适用说明。</p>
+        </article>
+      </div>
     </section>
 
-    <section class="section" id="providers">
-      <h2>4. 第三方模型服务与网络请求 / Third-Party Model Providers and Network Requests</h2>
-      <p>
-        AI Nexus 会将请求发送到你自己配置的模型接口，例如 OpenAI、Anthropic、Google 或其他兼容服务。
-        AI Nexus sends requests to the model endpoints you configure, such as OpenAI, Anthropic, Google, or other compatible providers.
-      </p>
-      <ul>
-        <li>当你发送消息时，聊天内容会被发送到你选择的模型服务，用于生成回复。 When you send a message, the conversation content is sent to the provider you selected to generate a response.</li>
-        <li>当你进行接口测试或模型发现时，应用会向你配置的接口发起网络请求。 When you run connection tests or model discovery, the app sends network requests to the endpoint you configured.</li>
-        <li>如果你附加图片，且当前模型支持视觉输入，图片数据可能会随请求一起发送。 If you attach an image and the selected model supports vision input, the image data may be transmitted with the request.</li>
-        <li>当前版本下，非图片文件不会被自动解析并上传给模型；通常只会以文件标识文本加入消息上下文。 In the current version, non-image files are not automatically parsed and uploaded to the model; typically only a file label is inserted into the message context.</li>
-      </ul>
-      <p class="muted">
-        这些第三方服务对数据的处理不受 AI Nexus 单独控制。 Their downstream processing is governed by their own policies, not solely by AI Nexus.
-      </p>
+    <section class="section-block" id="faq">
+      <div class="section-heading">
+        <p class="section-kicker">FAQ</p>
+        <h2>常见问题</h2>
+      </div>
+
+      <div class="faq-grid">
+        <details class="faq-item" open>
+          <summary>这个页面适用于 iOS 和 macOS 吗？</summary>
+          <p>是的。本页面同时适用于 AI Nexus 的 iOS 和 macOS 版本，可同时作为技术支持页面和隐私政策页面使用。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>AI Nexus 面向哪些年龄段？</summary>
+          <p>AI Nexus 面向全年龄段用户。若未成年人使用，建议在父母或监护人指导下配置模型服务、API Key 和网络访问。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>AI Nexus 是否适用于大部分国家和地区？</summary>
+          <p>是的，产品设计上面向大部分国家和地区用户，但具体可用性仍可能受到当地法律政策、App Store 上架范围、网络条件和第三方模型服务可用性的影响。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>AI Nexus 需要注册账号吗？</summary>
+          <p>不需要。当前版本不要求你单独注册 AI Nexus 账号。你主要需要自己配置模型服务的端点、API Key 和模型名。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>聊天记录默认存在哪里？</summary>
+          <p>默认保存在设备本地。聊天、统计记录、个性化内容和大部分设置都采用本地优先方式处理。同步是可选功能，不是默认强制上传。</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>联系支持前，最好准备什么信息？</summary>
+          <p>建议附上设备型号、系统版本、AI Nexus 版本、使用的模型提供方、问题复现步骤、报错文案，以及一张能看清状态的截图。</p>
+        </details>
+      </div>
     </section>
 
-    <section class="section" id="storage">
-      <h2>5. 数据存储、同步与保留 / Storage, Sync, and Retention</h2>
-      <h3>5.1 本地存储 / Local Storage</h3>
-      <p>
-        聊天记录、统计记录、个性化内容、资料信息和大部分配置默认保存在你的设备本地。
-        Conversations, usage records, personalization content, profile data, and most settings are stored locally on your device by default.
-      </p>
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="section-kicker">Send Better Diagnostics</p>
+        <h2>发支持邮件时，建议带上这些信息</h2>
+      </div>
 
-      <h3>5.2 安全存储 / Secure Storage</h3>
-      <p>
-        已保存的 API Key 和模型配置会通过系统安全存储能力保存。
-        Saved API keys and model profiles are stored using the operating system's secure storage facilities.
-      </p>
-
-      <h3>5.3 可选同步 / Optional Sync</h3>
-      <p>
-        在支持的 iOS 设备上，如果你主动开启自动备份或手动执行同步，应用会尝试通过 iCloud Key-Value Store
-        同步聊天、配置、统计记录、资料信息和共享记忆。
-        On supported iOS devices, if you enable auto backup or manually trigger sync, the app may sync conversations,
-        configuration, usage records, profile data, and shared memory through iCloud Key-Value Store.
-      </p>
-
-      <h3>5.4 数据保留 / Retention</h3>
-      <p>
-        数据会保留到你删除相关聊天、清空统计记录、移除安全凭证，或卸载应用为止。
-        Depending on the operating system, some secure items stored in Keychain may persist across reinstall until you delete them inside the app.
-      </p>
+      <div class="diagnostic-panel">
+        <div class="diagnostic-copy">
+          <p>
+            支持效率最高的邮件，通常都不是一句“不能用了”，而是能让问题被快速复现。
+            下面这份清单基本够用，iOS 和 macOS 两端都适用。
+          </p>
+        </div>
+        <ul class="diagnostic-list">
+          <li>设备与系统版本，例如 iPhone / iPad / Mac 以及对应系统版本</li>
+          <li>AI Nexus 的版本号或你当前安装来源</li>
+          <li>所使用的模型服务提供方和端点类型</li>
+          <li>是否开启了视觉输入、自动同步、凭证库等相关功能</li>
+          <li>能稳定复现的问题步骤</li>
+          <li>错误提示原文，或至少附上一张截图</li>
+        </ul>
+      </div>
     </section>
 
-    <section class="section" id="security">
-      <h2>6. 安全措施 / Security</h2>
-      <ul>
-        <li>应用使用系统安全存储机制保存敏感模型配置。 The app uses system secure storage for sensitive model configuration.</li>
-        <li>应用支持系统认证能力，用于解锁安全凭证库等敏感区域。 The app supports system authentication to protect sensitive areas such as the secure vault.</li>
-        <li>尽管我们采取合理措施保护信息，但任何电子存储或网络传输都无法保证绝对安全。 No electronic storage or transmission method can be guaranteed to be 100% secure.</li>
-      </ul>
+    <section class="section-block" id="privacy">
+      <div class="section-heading">
+        <p class="section-kicker">Privacy Policy</p>
+        <h2>隐私政策</h2>
+        <p>
+          以下隐私政策同时适用于 AI Nexus 的 iOS 和 macOS 版本，以及当前这份支持与隐私说明页面。
+        </p>
+      </div>
+
+      <div class="policy-stack">
+        <article class="policy-card">
+          <h2>1. 适用范围 / Scope</h2>
+          <p>
+            本页面适用于 AI Nexus 应用及与之对应的支持与隐私政策页面。
+            It applies to the AI Nexus app on iOS and macOS and to this support and privacy page.
+          </p>
+          <p class="muted-text">
+            如果你通过 AI Nexus 连接第三方模型服务，第三方服务对数据的处理也将受其自身隐私政策和服务条款约束。
+          </p>
+        </article>
+
+        <article class="policy-card">
+          <h2>2. 我们收集和处理的信息 / Information We Collect and Process</h2>
+          <h3>2.1 你主动提供的信息 / Information You Provide</h3>
+          <ul class="clean-list">
+            <li>聊天内容、提示词、用户信息和个性化内容</li>
+            <li>接口地址、模型名称、API Key 以及相关模型参数</li>
+            <li>你填写的资料信息，例如昵称和邮箱</li>
+            <li>你主动选择的图片或文件附件</li>
+          </ul>
+
+          <h3>2.2 应用在本地生成或保存的信息 / Data Generated or Stored Locally</h3>
+          <ul class="clean-list">
+            <li>聊天会话、消息时间、模型切换记录和会话标题</li>
+            <li>Token 用量、费用估算和时间范围统计等使用记录</li>
+            <li>主题、语言和偏好设置等设备端配置</li>
+          </ul>
+
+          <h3>2.3 敏感配置 / Sensitive Configuration</h3>
+          <p>已保存的模型配置和 API Key 会使用系统安全存储机制保存。</p>
+        </article>
+
+        <article class="policy-card">
+          <h2>3. 我们如何使用这些信息 / How We Use Information</h2>
+          <ul class="clean-list">
+            <li>提供聊天、模型切换、消息生成和多模型访问能力</li>
+            <li>保存会话历史、偏好设置和个人化上下文</li>
+            <li>记录 Token 用量和估算费用，帮助你查看使用趋势</li>
+            <li>在你主动触发时执行模型发现、接口测试和同步操作</li>
+          </ul>
+        </article>
+
+        <article class="policy-card">
+          <h2>4. 第三方模型服务与网络请求 / Third-Party Providers and Requests</h2>
+          <p>
+            AI Nexus 会将请求发送到你自己配置的模型接口，例如 OpenAI、Anthropic、Google 或其他兼容服务。
+          </p>
+          <ul class="clean-list">
+            <li>发送消息时，聊天内容会被发往你选择的模型服务以生成回复</li>
+            <li>接口测试和模型发现会向你配置的服务端点发起请求</li>
+            <li>如果你附加图片，且当前模型支持视觉输入，图片数据可能会随请求一起发送</li>
+            <li>非图片文件在当前版本通常不会被自动解析并上传给模型</li>
+          </ul>
+          <p class="muted-text">这些第三方服务对数据的处理不受 AI Nexus 单独控制。</p>
+        </article>
+
+        <article class="policy-card">
+          <h2>5. 数据存储、同步与安全 / Storage, Sync, and Security</h2>
+          <h3>5.1 本地存储 / Local Storage</h3>
+          <p>聊天记录、统计记录、个性化内容、资料信息和大部分配置默认保存在你的设备本地。</p>
+
+          <h3>5.2 安全存储 / Secure Storage</h3>
+          <p>已保存的 API Key 和模型配置会通过系统安全存储能力保存。</p>
+
+          <h3>5.3 可选同步 / Optional Sync</h3>
+          <p>
+            在支持的设备与功能路径下，如果你主动开启自动备份或手动执行同步，应用会尝试同步聊天、配置、
+            统计记录、资料信息和共享记忆。
+          </p>
+
+          <h3>5.4 安全说明 / Security Note</h3>
+          <p>我们会尽量采用合理措施保护信息，但任何电子存储或网络传输都无法保证绝对安全。</p>
+        </article>
+
+        <article class="policy-card">
+          <h2>6. 年龄与地区说明 / Ages and Regions</h2>
+          <p>
+            AI Nexus 面向全年龄段用户。若未成年人使用，建议在父母或监护人指导下管理模型服务、API Key、
+            网络访问与付费相关配置。
+          </p>
+          <p>
+            AI Nexus 设计上面向大部分国家和地区用户，但实际可用性可能受当地法律法规、App Store 覆盖范围、
+            网络连接条件以及第三方模型服务可用性的影响。
+          </p>
+        </article>
+
+        <article class="policy-card">
+          <h2>7. 你的控制权 / Your Controls</h2>
+          <ul class="clean-list">
+            <li>你可以修改或删除聊天内容</li>
+            <li>你可以清空 Token 统计记录</li>
+            <li>你可以删除已保存的 API Key 或模型配置</li>
+            <li>你可以关闭自动同步，或不使用同步功能</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <section class="section" id="rights">
-      <h2>7. 你的控制权 / Your Controls</h2>
-      <ul>
-        <li>你可以修改或删除聊天内容。 You can edit or delete your conversations.</li>
-        <li>你可以清空 Token 统计记录。 You can clear token usage records.</li>
-        <li>你可以删除已保存的 API Key 或模型配置。 You can remove saved API keys and model profiles.</li>
-        <li>你可以关闭自动同步，或不使用 iCloud 同步功能。 You can disable auto sync or avoid using iCloud sync entirely.</li>
-      </ul>
+    <section class="section-block" id="contact">
+      <div class="section-heading">
+        <p class="section-kicker">Contact</p>
+        <h2>联系技术支持</h2>
+      </div>
+
+      <div class="contact-grid">
+        <article class="contact-card emphasis">
+          <h3>邮箱支持</h3>
+          <p>适合发送截图、版本信息和较完整的问题说明，iOS 与 macOS 问题都可以直接联系。</p>
+          <a class="button primary" href="mailto:huangweihao8713@gmail.com?subject=AI%20Nexus%20Support">huangweihao8713@gmail.com</a>
+        </article>
+
+        <article class="contact-card">
+          <h3>微信</h3>
+          <p>适合快速确认问题方向或补充上下文。</p>
+          <p class="contact-value">huanwei93</p>
+        </article>
+
+        <article class="contact-card">
+          <h3>说明</h3>
+          <p>如果你的问题涉及数据存储、同步、年龄范围、地区适用或模型服务边界，请直接查看上方隐私政策部分。</p>
+          <a class="text-link" href="#privacy">跳转到隐私政策</a>
+        </article>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>8. 儿童隐私 / Children's Privacy</h2>
-      <p>
-        AI Nexus 并非面向 13 岁以下儿童设计。我们不会故意收集儿童个人信息。
-        AI Nexus is not directed to children under 13, and we do not knowingly collect personal information from children.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>9. 政策变更 / Changes to This Policy</h2>
-      <p>
-        我们可能会在功能或数据处理方式发生变化时更新本政策。更新后的版本会发布在本页面，并标注最新更新时间。
-        We may update this policy when features or data practices change. The latest version will be posted on this page with an updated effective date.
-      </p>
-    </section>
-
-    <section class="section" id="contact">
-      <h2>10. 联系方式 / Contact</h2>
-      <p>
-        如你对本隐私政策或数据处理方式有疑问，可以直接通过以下方式联系开发者：
-      </p>
-      <ul>
-        <li>微信 / WeChat: huanwei93</li>
-        <li>邮箱 / Email: <a href="mailto:huangweihao8713@gmail.com">huangweihao8713@gmail.com</a></li>
-      </ul>
-      <p class="muted">
-        If you have any questions about this Privacy Policy or the app's data practices, please contact the developer
-        via WeChat or email.
-      </p>
-    </section>
-
-    <p class="footer">
-      AI Nexus Privacy Policy · GitHub Pages Ready
-    </p>
+    <footer class="site-footer">
+      <p>AI Nexus Support & Privacy</p>
+      <div class="footer-links">
+        <a href="#coverage">Technical Support</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="mailto:huangweihao8713@gmail.com?subject=AI%20Nexus%20Support">Email Support</a>
+      </div>
+      <p class="footer-note">Applies to AI Nexus on iOS and macOS · Last updated: March 17, 2026</p>
+    </footer>
   </main>
 </body>
 </html>
