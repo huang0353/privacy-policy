@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Nexus Privacy Policy</title>
+  <meta name="description" content="AI Nexus 隐私政策 / Privacy Policy">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4f7fb;
+      --bg-accent: #e8f2ff;
+      --panel: rgba(255, 255, 255, 0.78);
+      --panel-strong: rgba(255, 255, 255, 0.9);
+      --text: #10223a;
+      --muted: #5a6e86;
+      --line: rgba(16, 34, 58, 0.12);
+      --primary: #0f6fff;
+      --primary-soft: rgba(15, 111, 255, 0.12);
+      --shadow: 0 20px 60px rgba(18, 38, 63, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #08111f;
+        --bg-accent: #10233f;
+        --panel: rgba(14, 24, 39, 0.72);
+        --panel-strong: rgba(12, 22, 36, 0.9);
+        --text: #edf4ff;
+        --muted: #9bb0c8;
+        --line: rgba(237, 244, 255, 0.1);
+        --primary: #66a4ff;
+        --primary-soft: rgba(102, 164, 255, 0.14);
+        --shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "SF Pro Display", "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, var(--bg-accent), transparent 38%),
+        radial-gradient(circle at top right, rgba(15, 111, 255, 0.08), transparent 28%),
+        linear-gradient(180deg, var(--bg), color-mix(in srgb, var(--bg) 86%, white 14%));
+      line-height: 1.7;
+    }
+
+    .shell {
+      width: min(980px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .hero,
+    .card,
+    .section {
+      background: var(--panel);
+      backdrop-filter: blur(22px) saturate(150%);
+      -webkit-backdrop-filter: blur(22px) saturate(150%);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 760px;
+    }
+
+    .chips {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .chip {
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+    }
+
+    .chip strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .chip span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      margin-bottom: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card strong {
+      color: var(--text);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.28);
+      font-size: 14px;
+    }
+
+    .section {
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        width: min(100vw - 20px, 980px);
+        padding-top: 18px;
+      }
+
+      .hero,
+      .section,
+      .card {
+        padding: 18px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">AI Nexus Privacy Policy</div>
+      <h1>隐私政策</h1>
+      <p class="subtitle">
+        本页面说明 AI Nexus 如何处理你的聊天内容、模型配置、API Key、附件、统计记录以及可选同步数据。
+        This page explains how AI Nexus handles your conversations, model settings, API keys, attachments,
+        usage records, and optional sync data.
+      </p>
+      <div class="chips">
+        <div class="chip">
+          <strong>本地优先 / Local-first</strong>
+          <span>聊天、配置与统计信息默认保存在你的设备上。</span>
+        </div>
+        <div class="chip">
+          <strong>可选同步 / Optional Sync</strong>
+          <span>仅在支持设备和你主动启用时才会尝试 iCloud 同步。</span>
+        </div>
+        <div class="chip">
+          <strong>用户自选模型 / User-selected Providers</strong>
+          <span>请求会发送到你自己配置的模型服务提供方。</span>
+        </div>
+        <div class="chip">
+          <strong>更新日期 / Last Updated</strong>
+          <span>2026 年 3 月 17 日 / March 17, 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <p>
+        <strong>简要说明 / Quick Summary:</strong>
+        AI Nexus 不要求你注册账户。应用当前版本默认不集成广告 SDK，也不依赖第三方统计 SDK。
+        你在应用中输入的内容会按你选择的功能用途处理，例如本地存储、调用你配置的 AI 接口、或在支持设备上进行可选同步。
+      </p>
+    </section>
+
+    <nav>
+      <a href="#scope">适用范围</a>
+      <a href="#collect">收集的信息</a>
+      <a href="#use">使用方式</a>
+      <a href="#providers">模型服务</a>
+      <a href="#storage">存储与同步</a>
+      <a href="#security">安全</a>
+      <a href="#rights">你的控制权</a>
+      <a href="#contact">联系方式</a>
+    </nav>
+
+    <section class="section" id="scope">
+      <h2>1. 适用范围 / Scope</h2>
+      <p>
+        本隐私政策适用于 AI Nexus 应用及与其对应的 GitHub Pages 隐私政策页面。
+        This Privacy Policy applies to the AI Nexus app and the related GitHub Pages privacy page.
+      </p>
+      <p class="muted">
+        如果你通过 AI Nexus 连接第三方模型服务，第三方服务对数据的处理也将受其自身隐私政策和服务条款约束。
+        If you connect AI Nexus to a third-party model provider, that provider's privacy policy and terms will also apply.
+      </p>
+    </section>
+
+    <section class="section" id="collect">
+      <h2>2. 我们收集和处理的信息 / Information We Collect and Process</h2>
+      <h3>2.1 你主动提供的信息 / Information You Provide</h3>
+      <ul>
+        <li>聊天内容、提示词、你输入的用户信息和个性化内容。 Conversations, prompts, user info, and personalization content you enter.</li>
+        <li>你配置的接口地址、模型名称、API Key 以及相关模型参数。 Endpoint URLs, model names, API keys, and related model settings you configure.</li>
+        <li>你填写的资料信息，例如昵称和邮箱。 Profile information such as nickname and email, if you choose to enter them.</li>
+        <li>你主动选择的图片或文件附件。 Images or files you explicitly choose to attach.</li>
+      </ul>
+
+      <h3>2.2 应用在本地生成或保存的信息 / Data Generated or Stored Locally</h3>
+      <ul>
+        <li>聊天会话、消息时间、模型切换记录和会话标题。 Chat histories, timestamps, model selections, and conversation titles.</li>
+        <li>Token 用量、费用估算、时间范围统计等使用记录。 Token usage, estimated cost, and usage analytics records.</li>
+        <li>界面主题、语言、偏好设置等设备端配置。 Device-side preferences such as theme, language, and UI settings.</li>
+      </ul>
+
+      <h3>2.3 敏感配置 / Sensitive Configuration</h3>
+      <p>
+        已保存的模型配置和 API Key 会使用系统安全存储机制保存。 In the current app build,
+        saved model profiles and API keys are stored using the system secure storage mechanism.
+      </p>
+    </section>
+
+    <section class="section" id="use">
+      <h2>3. 我们如何使用这些信息 / How We Use Information</h2>
+      <ul>
+        <li>提供聊天、模型切换、消息生成和多模型访问能力。 To provide chat, model switching, message generation, and multi-model access.</li>
+        <li>保存你的会话历史、偏好设置和个人化上下文。 To save your conversation history, preferences, and personalization context.</li>
+        <li>记录 Token 用量和估算费用，帮助你查看使用趋势。 To record token usage and estimated cost so you can review usage trends.</li>
+        <li>在你主动触发时，执行模型发现、接口测试和同步操作。 To perform model discovery, connection tests, and sync actions when you explicitly trigger them.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="providers">
+      <h2>4. 第三方模型服务与网络请求 / Third-Party Model Providers and Network Requests</h2>
+      <p>
+        AI Nexus 会将请求发送到你自己配置的模型接口，例如 OpenAI、Anthropic、Google 或其他兼容服务。
+        AI Nexus sends requests to the model endpoints you configure, such as OpenAI, Anthropic, Google, or other compatible providers.
+      </p>
+      <ul>
+        <li>当你发送消息时，聊天内容会被发送到你选择的模型服务，用于生成回复。 When you send a message, the conversation content is sent to the provider you selected to generate a response.</li>
+        <li>当你进行接口测试或模型发现时，应用会向你配置的接口发起网络请求。 When you run connection tests or model discovery, the app sends network requests to the endpoint you configured.</li>
+        <li>如果你附加图片，且当前模型支持视觉输入，图片数据可能会随请求一起发送。 If you attach an image and the selected model supports vision input, the image data may be transmitted with the request.</li>
+        <li>当前版本下，非图片文件不会被自动解析并上传给模型；通常只会以文件标识文本加入消息上下文。 In the current version, non-image files are not automatically parsed and uploaded to the model; typically only a file label is inserted into the message context.</li>
+      </ul>
+      <p class="muted">
+        这些第三方服务对数据的处理不受 AI Nexus 单独控制。 Their downstream processing is governed by their own policies, not solely by AI Nexus.
+      </p>
+    </section>
+
+    <section class="section" id="storage">
+      <h2>5. 数据存储、同步与保留 / Storage, Sync, and Retention</h2>
+      <h3>5.1 本地存储 / Local Storage</h3>
+      <p>
+        聊天记录、统计记录、个性化内容、资料信息和大部分配置默认保存在你的设备本地。
+        Conversations, usage records, personalization content, profile data, and most settings are stored locally on your device by default.
+      </p>
+
+      <h3>5.2 安全存储 / Secure Storage</h3>
+      <p>
+        已保存的 API Key 和模型配置会通过系统安全存储能力保存。
+        Saved API keys and model profiles are stored using the operating system's secure storage facilities.
+      </p>
+
+      <h3>5.3 可选同步 / Optional Sync</h3>
+      <p>
+        在支持的 iOS 设备上，如果你主动开启自动备份或手动执行同步，应用会尝试通过 iCloud Key-Value Store
+        同步聊天、配置、统计记录、资料信息和共享记忆。
+        On supported iOS devices, if you enable auto backup or manually trigger sync, the app may sync conversations,
+        configuration, usage records, profile data, and shared memory through iCloud Key-Value Store.
+      </p>
+
+      <h3>5.4 数据保留 / Retention</h3>
+      <p>
+        数据会保留到你删除相关聊天、清空统计记录、移除安全凭证，或卸载应用为止。
+        Depending on the operating system, some secure items stored in Keychain may persist across reinstall until you delete them inside the app.
+      </p>
+    </section>
+
+    <section class="section" id="security">
+      <h2>6. 安全措施 / Security</h2>
+      <ul>
+        <li>应用使用系统安全存储机制保存敏感模型配置。 The app uses system secure storage for sensitive model configuration.</li>
+        <li>应用支持系统认证能力，用于解锁安全凭证库等敏感区域。 The app supports system authentication to protect sensitive areas such as the secure vault.</li>
+        <li>尽管我们采取合理措施保护信息，但任何电子存储或网络传输都无法保证绝对安全。 No electronic storage or transmission method can be guaranteed to be 100% secure.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="rights">
+      <h2>7. 你的控制权 / Your Controls</h2>
+      <ul>
+        <li>你可以修改或删除聊天内容。 You can edit or delete your conversations.</li>
+        <li>你可以清空 Token 统计记录。 You can clear token usage records.</li>
+        <li>你可以删除已保存的 API Key 或模型配置。 You can remove saved API keys and model profiles.</li>
+        <li>你可以关闭自动同步，或不使用 iCloud 同步功能。 You can disable auto sync or avoid using iCloud sync entirely.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>8. 儿童隐私 / Children's Privacy</h2>
+      <p>
+        AI Nexus 并非面向 13 岁以下儿童设计。我们不会故意收集儿童个人信息。
+        AI Nexus is not directed to children under 13, and we do not knowingly collect personal information from children.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>9. 政策变更 / Changes to This Policy</h2>
+      <p>
+        我们可能会在功能或数据处理方式发生变化时更新本政策。更新后的版本会发布在本页面，并标注最新更新时间。
+        We may update this policy when features or data practices change. The latest version will be posted on this page with an updated effective date.
+      </p>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>10. 联系方式 / Contact</h2>
+      <p>
+        如你对本隐私政策或数据处理方式有疑问，可以直接通过以下方式联系开发者：
+      </p>
+      <ul>
+        <li>微信 / WeChat: huanwei93</li>
+        <li>邮箱 / Email: <a href="mailto:huangweihao8713@gmail.com">huangweihao8713@gmail.com</a></li>
+      </ul>
+      <p class="muted">
+        If you have any questions about this Privacy Policy or the app's data practices, please contact the developer
+        via WeChat or email.
+      </p>
+    </section>
+
+    <p class="footer">
+      AI Nexus Privacy Policy · GitHub Pages Ready
+    </p>
+  </main>
+</body>
+</html>
